@@ -70,7 +70,17 @@ int main()
         return 1;
     }
 
-    // Binding a Socket
+    // Secure port binding using SO_EXCLUSIVEADDRUSE
+    BOOL optval = TRUE;
+    if (setsockopt(ListenSocket, SOL_SOCKET, SO_EXCLUSIVEADDRUSE, (char *)&optval, sizeof(optval)) == SOCKET_ERROR)
+    {
+        printf("setsockopt(SO_EXCLUSIVEADDRUSE) failed: %d\n", WSAGetLastError());
+        closesocket(ListenSocket);
+        WSACleanup();
+        return 1;
+    }
+
+    // Binding a Socket:
 
     // Setup the TCP listening Socket
     iResult = bind(ListenSocket, result->ai_addr, (int)result->ai_addrlen);
@@ -164,6 +174,6 @@ int main()
     // cleanup
     closesocket(ClientSocket);
     WSACleanup();
-    
+
     return 0;
 }
