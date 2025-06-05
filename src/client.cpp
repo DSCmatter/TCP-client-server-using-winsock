@@ -23,7 +23,7 @@ int __cdecl main(int argc, char **argv)
                     *ptr = NULL,
                     hints;
 
-    const char *sendbuf = "this is a test";
+    const char *sendbuf = "hello";
     char recvbuf[DEFAULT_BUFLEN];
     int iResult;
     int recvbuflen = DEFAULT_BUFLEN;
