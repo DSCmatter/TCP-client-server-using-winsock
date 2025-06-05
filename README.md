@@ -1,6 +1,6 @@
 # Winsock TCP Client-Server Application (Windows)
 
-This project demonstrates a basic TCP client-server communication setup using the Winsock API on Windows. It includes functionality for secure port binding using `SO_EXCLUSIVEADDRUSE`.
+Demonstrates a basic TCP client-server communication setup using the Winsock API on Windows. It includes functionality for secure port binding using `SO_EXCLUSIVEADDRUSE`.
 
 ## Features
 
