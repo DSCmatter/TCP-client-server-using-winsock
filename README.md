@@ -62,7 +62,7 @@ The server uses the `SO_EXCLUSIVEADDRUSE` socket option to prevent other applica
 
 ### Communication
 
-Currently, the communication is done over plain TCP. To secure the connection:
+Currently, the communication is done over plain TCP. 
 
 ## License
 
